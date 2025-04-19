@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Rajdeep Pal" />
+    <meta
+      name="description"
+      content="This is a simple website for learning purpose"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aclonica&family=Audiowide&family=Delicious+Handrawn&family=Delius&family=Macondo+Swash+Caps&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Tilt+Prism&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      .macondo-swash-caps-regular {
+        font-family: "Macondo Swash Caps", cursive;
+      }
+      .delicious-handrawn-regular {
+        font-family: "Delicious Handrawn", cursive;
+      }
+      .aclonica-regular {
+        font-family: "Aclonica", sans-serif;
+      }
+      .audiowide-regular {
+        font-family: "Audiowide", sans-serif;
+      }
+      .delius-regular {
+        font-family: "Delius", cursive;
+      }
+      .tilt-prism {
+        font-family: "Tilt Prism", sans-serif;
+      }
+      .space-mono-regular {
+        font-family: "Space Mono", monospace;
+      }
+    </style>
+    <title>Shaunak Ghosh</title>
+  </head>
+  <body
+    class="w-screen min-h-screen overflow-x-hidden flex flex-col items-center bg-gradient-to-tr from-[#292f36] to-[#7209b7]"
+  >
+    <!-- fully functional navbar -->
+    <nav
+      class="mt-5 bg-gradient-to-t from-[#292f36] to-[#7209df] px-5 py-[10px] rounded-full h-[70px] overflow-hidden 2xl:w-[1440px] xl:w-[1024px] w-full flex justify-between items-center"
+    >
+      <a
+        href="/"
+        class="macondo-swash-caps-regular cursor-pointer text-[#f7fff7] text-[40px] font-extrabold text-center"
+      >
+        Shaunak<span class="text-[#4ecdc4]">Ghosh</span>
+      </a>
+      <div
+        class="aclonica-regular hidden text-[20px] font-bold text-[#f7fff7] lg:flex justify-evenly items-center"
+      >
+        <a href="/" class="hover:scale-115 hover:text-[#4ecdc4] mx-[20px]"
+          >Home</a
+        >
+        <a
+          href="./about.html"
+          class="hover:scale-115 hover:text-[#4ecdc4] mx-[20px]"
+          >About Me</a
+        >
+        <a
+          href="./skills.html"
+          class="hover:scale-115 hover:text-[#4ecdc4] mx-[20px]"
+          >Skills</a
+        >
+        <a href="./projects.html" class="hover:scale-115 hover:text-[#4ecdc4] mx-[20px]"
+          >Projects</a
+        >
+        <a
+          href=""
+          class="hover:scale-115 px-5 py-2 bg-[#4ecdc4] text-[#292f36] rounded-full"
+          >Contact Me</a
+        >
+      </div>
+      <div
+        onclick="openMenu()"
+        class="lg:hidden flex flex-col gap-2 cursor-pointer"
+      >
+        <div class="w-9 h-1 bg-white rounded-full"></div>
+        <div class="w-9 h-1 bg-white rounded-full"></div>
+        <div class="w-9 h-1 bg-white rounded-full"></div>
+      </div>
+    </nav>
+
+    <!-- mobile view -->
+    <div
+      id="menu"
+      class="w-screen overflow-x-hidden hidden h-screen fixed z-50 justify-end"
+    >
+      <div
+        class="sm:w-[500px] w-screen h-fit py-5 rounded-bl-[50px] flex flex-col items-center bg-[#1d3557] aclonica-regular gap-5 text-[20px] font-bold text-[#f7fff7]"
+      >
+        <div class="w-full flex justify-between">
+          <a
+            href="/"
+            class="macondo-swash-caps-regular px-3 cursor-pointer text-[#f7fff7] text-[30px] font-extrabold text-center"
+          >
+            Shaunak<span class="text-[#4ecdc4]">Ghosh</span>
+          </a>
+          <div
+            onclick="closeMenu()"
+            class="w-9 h-9 cursor-pointer flex flex-col mt-5 mr-2"
+          >
+            <div class="w-9 h-1 bg-white rounded-full -mb-1 rotate-45"></div>
+            <div class="w-9 h-1 bg-white rounded-full -rotate-45"></div>
+          </div>
+        </div>
+        <a href="/" class="hover:scale-115 hover:text-[#4ecdc4] mx-[20px]"
+          >Home</a
+        >
+        <a
+          href="./about.html"
+          class="hover:scale-115 hover:text-[#4ecdc4] mx-[20px]"
+          >About me</a
+        >
+        <a
+          href="./skills.html"
+          class="hover:scale-115 hover:text-[#4ecdc4] mx-[20px]"
+          >Skills</a
+        >
+        <a href="./projects.html" class="hover:scale-115 hover:text-[#4ecdc4] mx-[20px]"
+          >Projects</a
+        >
+        <a
+          href=""
+          class="hover:scale-115 px-5 py-2 bg-[#4ecdc4] text-[#292f36] rounded-full"
+          >Contact Me</a
+        >
+      </div>
+    </div>
+
+    <!-- main content1 -->
+    <main
+      class="mt-5 2xl:w-[1440px] xl:w-[1024px] w-full overflow-x-hidden px-4 xl:px-0 min-h-[calc(100vh-90px)] flex flex-col justify-evenly items-center"
+    >
+      <form
+        action="mailto:rajdeeppalofficial@example.com"
+        method="post"
+        enctype="text/plain"
+        class="flex flex-col gap-3 bg-[#ffffff  55] p-3 rounded-lg w-full m-2 md:w-[40vw]"
+      >
+        <p class="text-[#4ecdc4] text-[35px] font-serif">
+          Let's talk — work with me
+        </p>
+
+        <input
+          required
+          class="bg-[#fff5] text-[#000] outline-none placeholder:text-[#000] w-full h-[50px] rounded-lg px-4 text-[20px] font-mono resize-none"
+          type="text"
+          name="Name"
+          placeholder="Your Name"
+        />
+
+        <input
+          required
+          class="bg-[#fff5] text-[#000] outline-none placeholder:text-[#000] w-full h-[50px] rounded-lg px-4 text-[20px] font-mono resize-none"
+          type="email"
+          name="Email"
+          placeholder="Your Email ID"
+        />
+
+        <input
+          required
+          class="bg-[#fff5] text-[#000] outline-none placeholder:text-[#000] w-full h-[50px] rounded-lg px-4 text-[20px] font-mono resize-none"
+          type="tel"
+          name="Phone"
+          placeholder="Your Phone"
+        />
+
+        <textarea
+          required
+          class="bg-[#fff5] text-[#000] outline-none placeholder:text-[#000] w-full h-[300px] rounded-lg px-4 text-[20px] font-mono resize-none"
+          name="Message"
+          placeholder="Type your message here"
+        ></textarea>
+
+        <input
+          type="submit"
+          value="Send Message"
+          class="bg-[#4ecdc4] p-3 rounded-full text-[#ff9021] font-bold font-mono text-[20px]"
+        />
+      </form>
+    </main>
+
+    <script>
+      const menu = document.getElementById("menu");
+      function openMenu() {
+        menu.style.display = "flex";
+      }
+      function closeMenu() {
+        menu.style.display = "none";
+      }
+    </script>
+  </body>
+</html>
